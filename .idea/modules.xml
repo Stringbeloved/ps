@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-common.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-common.iml" group="ps-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-common/ps-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-common/ps-common_main.iml" group="ps-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-common/ps-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-common/ps-common_test.iml" group="ps-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface.iml" group="ps-interface" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface_main.iml" group="ps-interface" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface_test.iml" group="ps-interface" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-manager.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-manager.iml" group="ps-manager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-manager/ps-manager_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-manager/ps-manager_main.iml" group="ps-manager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-manager/ps-manager_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-manager/ps-manager_test.iml" group="ps-manager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-mapper/ps-mapper.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-mapper/ps-mapper.iml" group="ps-mapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-mapper/ps-mapper_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-mapper/ps-mapper_main.iml" group="ps-mapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-mapper/ps-mapper_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-mapper/ps-mapper_test.iml" group="ps-mapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-parent.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-parent_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-parent_main.iml" group="ps-parent" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-parent_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-parent_test.iml" group="ps-parent" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-pojo.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-pojo.iml" group="ps-pojo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-pojo/ps-pojo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-pojo/ps-pojo_main.iml" group="ps-pojo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-pojo/ps-pojo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-pojo/ps-pojo_test.iml" group="ps-pojo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-portal.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-portal.iml" group="ps-portal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-portal/ps-portal_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-portal/ps-portal_main.iml" group="ps-portal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-portal/ps-portal_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-portal/ps-portal_test.iml" group="ps-portal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-service/ps-service.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-service/ps-service.iml" group="ps-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-service/ps-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-service/ps-service_main.iml" group="ps-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-service/ps-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-service/ps-service_test.iml" group="ps-service" />
+    </modules>
+  </component>
+</project>

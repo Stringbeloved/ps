@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+body{
+	margin:0px;
+	padding:0px;
+	font-family: "微软雅黑";
+	font-size:20px;
+}
+img{
+	width: 100%;
+	height: 56.5%;
+}
+form{
+	width:1000px;
+	margin:20px auto;
+}
+form input{
+	width:180px;
+	height: 35px;
+	font-family: "微软雅黑";
+	font-size:20px;
+}
+
+#inuser{
+	float:left;
+	margin-right: 20px;
+}
+
+#inpass{
+	float:left;
+	margin-right: 20px;
+}
+
+#sumbutton{
+	float:left;
+	margin-right: 20px;
+}
+#sumbutton input{
+	width:80px;
+	outline: none;
+	border: 2px solid #D1D1D1;
+	border-radius: 15px;
+}
+#registered{
+	float:right;
+	font-size:16px;
+}

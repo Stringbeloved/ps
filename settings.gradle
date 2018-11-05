@@ -1,0 +1,9 @@
+rootProject.name = 'ps-parent'
+include 'ps-pojo'
+include 'ps-mapper'
+include 'ps-service'
+include 'ps-manager'
+include 'ps-interface'
+include 'ps-common'
+include 'ps-portal'
+
