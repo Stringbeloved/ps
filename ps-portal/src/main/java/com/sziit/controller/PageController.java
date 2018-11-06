@@ -20,4 +20,9 @@ public class PageController {
         //model.addAttribute("data",json);
         return "index";
     }
+
+    @RequestMapping("/{page}")
+    public String showPage(String page){
+        return page;
+    }
 }

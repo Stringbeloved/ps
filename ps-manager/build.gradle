@@ -34,5 +34,5 @@ dependencies {
 
     compile project(':ps-interface')
 
-    compile project(':ps-common')
+    //compile project(':ps-common')
 }
