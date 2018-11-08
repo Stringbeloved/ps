@@ -15,11 +15,11 @@ import org.springframework.util.StringUtils;
 import java.util.*;
 
 /*
- *  @项目名：  taotao-parent 
- *  @包名：    com.itheima.service.impl
+ *  @项目名：  ps-parent
+ *  @包名：    com.sziit.service.impl
  *  @文件名:   ContentServiceImpl
- *  @创建者:   xiaomi
- *  @创建时间:  2018/10/15 18:52
+ *  @创建者:   dzy
+ *  @创建时间:  2018/11/8 17:52
  *  @描述：    TODO
  */
 @Service
@@ -109,18 +109,18 @@ public class ContentServiceImpl implements ContentService {
             4. 存储到redis去，并且返回给controller
          */
 
-        System.out.println("现在要获取大广告位的数据了");
+        //System.out.println("现在要获取大广告位的数据了");
 
         ValueOperations<String, String> ops = redisTemplate.opsForValue();
         String json = ops.get("bigAd");
         //如果json字符串不是空，表示redis里面有数据，直接返回就可以了。
         if(!StringUtils.isEmpty(json)){
-            System.out.println("redis里面有数据，直接返回了");
+            //System.out.println("redis里面有数据，直接返回了");
             return json;
         }
 
 
-        System.out.println("redis没有数据，要去查询mysql数据库");
+        //System.out.println("redis没有数据，要去查询mysql数据库");
         //去mysql数据库查询
         Content c = new Content();
         c.setCategoryId(categoryId);
@@ -147,7 +147,7 @@ public class ContentServiceImpl implements ContentService {
         //还有最后一件事情就是： 查询完毕之后，要记得存到redis去以便下次获取
         ops.set("bigAd" , json);
 
-        System.out.println("mysql查询完毕，并且也存到了redis去");
+        //System.out.println("mysql查询完毕，并且也存到了redis去");
 
         /*HashOperations<String, Object, Object> hash = redisTemplate.opsForHash();
         hash.put("bigAd","1"  ,"第一条数据");

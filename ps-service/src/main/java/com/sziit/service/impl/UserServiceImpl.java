@@ -4,8 +4,8 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.sziit.service.UserService;
 
 /*
- *  @项目名：  taotao-parent 
- *  @包名：    com.itheima.impl
+ *  @项目名：  ps-parent
+ *  @包名：    com.sziit.impl
  *  @文件名:   UserServiceImpl
  *  @创建者:   dzy
  *  @创建时间:  2018/9/10 16:05
@@ -30,11 +30,10 @@ import com.sziit.service.UserService;
  *
  *
  */
-@Service
 public class UserServiceImpl implements UserService {
 
     @Override
     public void save() {
-        System.out.println("save()...");
+        //System.out.println("save()...");
     }
 }

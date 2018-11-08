@@ -1,8 +1,8 @@
 package com.sziit.service;
 
 /*
- *  @项目名：  taotao-parent 
- *  @包名：    com.itheima
+ *  @项目名：  ps-parent
+ *  @包名：    com.sziit
  *  @文件名:   UserService
  *  @创建者:   dzy
  *  @创建时间:  2018/9/10 16:04

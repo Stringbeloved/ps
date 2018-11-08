@@ -14,8 +14,11 @@ dependencies {
     //SpringBoot 依赖
     compile("org.springframework.boot:spring-boot-starter-web:1.5.10.RELEASE")
 
-    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf
+    // thymeleaf模板引擎
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.0.RELEASE'
+
+    //取消thymeleaf严格校验用到的
+    compile group: 'net.sourceforge.nekohtml', name: 'nekohtml', version: '1.9.22'
 
     //compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 

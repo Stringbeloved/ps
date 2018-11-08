@@ -25,7 +25,7 @@ import java.util.Date;
  * @version 1.0.0 2017-12-24
  */
 @Entity
-@Table(name = "TB_ITEM_PARAM_ITEM")
+@Table(name = "tb_item_param_item")
 public class ItemParamItem implements java.io.Serializable {
     /** 版本号 */
     private static final long serialVersionUID = 8905825436637591083L;

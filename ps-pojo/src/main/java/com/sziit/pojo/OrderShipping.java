@@ -25,7 +25,7 @@ import java.util.Date;
  * @version 1.0.0 2017-12-24
  */
 @Entity
-@Table(name = "TB_ORDER_SHIPPING")
+@Table(name = "tb_order_shipping")
 public class OrderShipping implements java.io.Serializable {
     /** 版本号 */
     private static final long serialVersionUID = 6732027512609640608L;

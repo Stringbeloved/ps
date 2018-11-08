@@ -25,7 +25,7 @@ import java.util.Date;
  * @version 1.0.0 2017-12-24
  */
 @Entity
-@Table(name = "TB_CONTENT")
+@Table(name = "tb_content")
 public class Content implements java.io.Serializable {
     /** 版本号 */
     private static final long serialVersionUID = -8496488120916531724L;
@@ -279,5 +279,22 @@ public class Content implements java.io.Serializable {
      */
     public void setUpdated(Date updated) {
         this.updated = updated;
+    }
+
+    @Override
+    public String toString() {
+        return "Content{" +
+                "id=" + id +
+                ", categoryId=" + categoryId +
+                ", title='" + title + '\'' +
+                ", subTitle='" + subTitle + '\'' +
+                ", titleDesc='" + titleDesc + '\'' +
+                ", url='" + url + '\'' +
+                ", pic='" + pic + '\'' +
+                ", pic2='" + pic2 + '\'' +
+                ", content='" + content + '\'' +
+                ", created=" + created +
+                ", updated=" + updated +
+                '}';
     }
 }

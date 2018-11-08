@@ -19,14 +19,11 @@ Date.prototype.format = function(format){
     return format; 
 };
 
-var E3 = {
+var TT = TAOTAO = {
 	// 编辑器参数
 	kingEditorParams : {
-		//指定上传文件参数名称
 		filePostName  : "uploadFile",
-		//指定上传文件请求的url。
-		uploadJson : '/pic/upload',
-		//上传类型，分别为image、flash、media、file
+		uploadJson : '/rest/pic/upload',
 		dir : "image"
 	},
 	// 格式化时间
@@ -45,6 +42,16 @@ var E3 = {
 	formatPrice : function(val,row){
 		return (val/100).toFixed(2);
 	},
+	// 避免js注入
+	formatText : function(val,row){
+		if(val){
+			val = val.replace(/&/g,"&amp;");
+			val = val.replace(/</g,"&lt;");
+			val = val.replace(/>/g,"&gt;");
+			val = val.replace(/"/g,"&quot;");
+		}
+		return val;
+	},
 	// 格式化商品的状态
 	formatItemStatus : function formatStatus(val,row){
         if (val == 1){
@@ -57,9 +64,7 @@ var E3 = {
     },
     
     init : function(data){
-    	// 初始化图片上传组件
     	this.initPicUpload(data);
-    	// 初始化选择类目组件
     	this.initItemCat(data);
     },
     // 初始化图片上传组件
@@ -71,7 +76,6 @@ var E3 = {
     			<div class="pics">\
         			<ul></ul>\
         		</div>');
-    		// 回显图片
         	if(data && data.pics){
         		var imgs = data.pics.split(",");
         		for(var i in imgs){
@@ -80,14 +84,17 @@ var E3 = {
         			}
         		}
         	}
-        	//给“上传图片按钮”绑定click事件
-        	$(e).click(function(){
+        	$(e).unbind('click').click(function(){
         		var form = $(this).parentsUntil("form").parent("form");
-        		//打开图片上传窗口
-        		KindEditor.editor(E3.kingEditorParams).loadPlugin('multiimage',function(){
+        		KindEditor.editor(TT.kingEditorParams).loadPlugin('multiimage',function(){
         			var editor = this;
         			editor.plugin.multiImageDialog({
 						clickFn : function(urlList) {
+							_ele.siblings("div.pics").remove();
+							_ele.after('\
+								<div class="pics">\
+									<ul></ul>\
+								</div>');
 							var imgArray = [];
 							KindEditor.each(urlList, function(i, data) {
 								imgArray.push(data.url);
@@ -107,7 +114,9 @@ var E3 = {
     	$(".selectItemCat").each(function(i,e){
     		var _ele = $(e);
     		if(data && data.cid){
-    			_ele.after("<span style='margin-left:10px;'>"+data.cid+"</span>");
+				$.getJSON('cat/'+data.cid,function(_data){
+       				_ele.after("<span style='margin-left:10px;'>"+_data.name+"</span>");
+       			});
     		}else{
     			_ele.after("<span style='margin-left:10px;'></span>");
     		}
@@ -123,7 +132,8 @@ var E3 = {
     			    onOpen : function(){
     			    	var _win = this;
     			    	$("ul",_win).tree({
-    			    		url:'/item/cat/list',
+    			    		url:'/rest/item/cat',
+    			    		method:'GET',
     			    		animate:true,
     			    		onClick : function(node){
     			    			if($(this).tree("isLeaf",node.target)){
@@ -131,9 +141,6 @@ var E3 = {
     			    				_ele.parent().find("[name=cid]").val(node.id);
     			    				_ele.next().text(node.text).attr("cid",node.id);
     			    				$(_win).window('close');
-    			    				if(data && data.fun){
-    			    					data.fun.call(this,node);
-    			    				}
     			    			}
     			    		}
     			    	});
@@ -147,7 +154,7 @@ var E3 = {
     },
     
     createEditor : function(select){
-    	return KindEditor.create(select, E3.kingEditorParams);
+    	return KindEditor.create(select, TT.kingEditorParams);
     },
     
     /**
@@ -188,33 +195,6 @@ var E3 = {
     closeCurrentWindow : function(){
     	$(".panel-tool-close").click();
     },
-    
-    changeItemParam : function(node,formId){
-    	$.getJSON("/item/param/query/itemcatid/" + node.id,function(data){
-			  if(data.status == 200 && data.data){
-				 $("#"+formId+" .params").show();
-				 var paramData = JSON.parse(data.data.paramData);
-				 var html = "<ul>";
-				 for(var i in paramData){
-					 var pd = paramData[i];
-					 html+="<li><table>";
-					 html+="<tr><td colspan=\"2\" class=\"group\">"+pd.group+"</td></tr>";
-					 
-					 for(var j in pd.params){
-						 var ps = pd.params[j];
-						 html+="<tr><td class=\"param\"><span>"+ps+"</span>: </td><td><input autocomplete=\"off\" type=\"text\"/></td></tr>";
-					 }
-					 
-					 html+="</li></table>";
-				 }
-				 html+= "</ul>";
-				 $("#"+formId+" .params td").eq(1).html(html);
-			  }else{
-				 $("#"+formId+" .params").hide();
-				 $("#"+formId+" .params td").eq(1).empty();
-			  }
-		  });
-    },
     getSelectionsIds : function (select){
     	var list = $(select);
     	var sels = list.datagrid("getSelections");
@@ -234,7 +214,7 @@ var E3 = {
     initOnePicUpload : function(){
     	$(".onePicUpload").click(function(){
 			var _self = $(this);
-			KindEditor.editor(E3.kingEditorParams).loadPlugin('image', function() {
+			KindEditor.editor(TT.kingEditorParams).loadPlugin('image', function() {
 				this.plugin.imageDialog({
 					showRemote : false,
 					clickFn : function(url, title, width, height, border, align) {

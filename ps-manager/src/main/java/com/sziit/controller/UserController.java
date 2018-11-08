@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  *  @创建时间:  2018/10/15 9:26
  *  @描述：    TODO
  */
-@RestController
+//@RestController
 public class UserController {
 
     @Reference
@@ -21,7 +21,7 @@ public class UserController {
 
     @RequestMapping("save")
     public String  save(){
-        System.out.println("调用了UserController的save方法~！·");
+        //System.out.println("调用了UserController的save方法~！·");
         userService.save();
         return "save scuccess~!~!";
     }

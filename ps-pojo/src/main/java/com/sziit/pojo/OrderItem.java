@@ -24,7 +24,7 @@ import javax.persistence.Table;
  * @version 1.0.0 2017-12-24
  */
 @Entity
-@Table(name = "TB_ORDER_ITEM")
+@Table(name = "tb_order_item")
 public class OrderItem implements java.io.Serializable {
     /** 版本号 */
     private static final long serialVersionUID = 4841794024304299165L;

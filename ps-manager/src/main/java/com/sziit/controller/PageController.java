@@ -1,6 +1,7 @@
 package com.sziit.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /*
@@ -16,14 +17,22 @@ public class PageController {
 
     @RequestMapping("/")
     public String index(){
-        System.out.println("跳转首页");
-        return "index2";
+        //System.out.println("跳转首页");
+        return "index";
     }
 
 
-    @RequestMapping("/{page}")
-    public String showPage(String page){
-        return page;
+//    @RequestMapping("/{page}")
+//    public String showPage(String page){
+//        return page;
+//    }
+
+    @RequestMapping("/rest/page/{pageName}")
+    public String page(@PathVariable String pageName){
+
+        //System.out.println("pageName=" + pageName);
+
+        return pageName;
     }
 
 }

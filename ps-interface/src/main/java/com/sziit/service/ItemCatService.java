@@ -1,12 +1,16 @@
 package com.sziit.service;
 
 import com.sziit.pojo.EasyUITreeNode;
+import com.sziit.pojo.ItemCat;
 
 import java.util.List;
 
 
 public interface ItemCatService {
 
-	List<EasyUITreeNode> getItemCatList(long parentId);
+	//宜立方版
+	//List<EasyUITreeNode> getItemCatList(long parentId);
+
+	List<ItemCat> getCategoryByParentId(int parentId);
 	
 }
