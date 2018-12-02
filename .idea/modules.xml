@@ -23,6 +23,15 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-portal.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-portal.iml" group="ps-portal" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-portal/ps-portal_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-portal/ps-portal_main.iml" group="ps-portal" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-portal/ps-portal_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-portal/ps-portal_test.iml" group="ps-portal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-search-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-search-interface.iml" group="ps-search-interface" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-search-interface/ps-search-interface_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-search-interface/ps-search-interface_main.iml" group="ps-search-interface" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-search-interface/ps-search-interface_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-search-interface/ps-search-interface_test.iml" group="ps-search-interface" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-search-service/ps-search-service.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-search-service/ps-search-service.iml" group="ps-search-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-search-service/ps-search-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-search-service/ps-search-service_main.iml" group="ps-search-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-search-service/ps-search-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-search-service/ps-search-service_test.iml" group="ps-search-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-search-web/ps-search-web.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-search-web/ps-search-web.iml" group="ps-search-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-search-web/ps-search-web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-search-web/ps-search-web_main.iml" group="ps-search-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-search-web/ps-search-web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-search-web/ps-search-web_test.iml" group="ps-search-web" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-service/ps-service.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-service/ps-service.iml" group="ps-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-service/ps-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-service/ps-service_main.iml" group="ps-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-service/ps-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-service/ps-service_test.iml" group="ps-service" />

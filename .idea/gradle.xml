@@ -15,6 +15,9 @@
             <option value="$PROJECT_DIR$/ps-mapper" />
             <option value="$PROJECT_DIR$/ps-pojo" />
             <option value="$PROJECT_DIR$/ps-portal" />
+            <option value="$PROJECT_DIR$/ps-search-interface" />
+            <option value="$PROJECT_DIR$/ps-search-service" />
+            <option value="$PROJECT_DIR$/ps-search-web" />
             <option value="$PROJECT_DIR$/ps-service" />
           </set>
         </option>

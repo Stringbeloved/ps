@@ -26,7 +26,7 @@ dependencies {
     // 模板引擎thymeleaf
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.0.RELEASE'
 
-    //
+    //取消thymeleaf严格校验用到的
     compile group: 'net.sourceforge.nekohtml', name: 'nekohtml', version: '1.9.22'
 
     //文件上传

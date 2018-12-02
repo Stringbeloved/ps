@@ -6,4 +6,7 @@ include 'ps-manager'
 include 'ps-interface'
 include 'ps-common'
 include 'ps-portal'
+include 'ps-search-interface'
+include 'ps-search-service'
+include 'ps-search-web'
 

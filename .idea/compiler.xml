@@ -26,6 +26,12 @@
       <module name="ps-pojo_test" target="1.8" />
       <module name="ps-portal_main" target="1.8" />
       <module name="ps-portal_test" target="1.8" />
+      <module name="ps-search-interface_main" target="1.8" />
+      <module name="ps-search-interface_test" target="1.8" />
+      <module name="ps-search-service_main" target="1.8" />
+      <module name="ps-search-service_test" target="1.8" />
+      <module name="ps-search-web_main" target="1.8" />
+      <module name="ps-search-web_test" target="1.8" />
       <module name="ps-service_main" target="1.8" />
       <module name="ps-service_test" target="1.8" />
     </bytecodeTargetLevel>
