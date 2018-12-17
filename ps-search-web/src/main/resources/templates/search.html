@@ -7,15 +7,15 @@
 
 	<title>搜索页面</title>
 
-	<link th:href="@{css/amazeui.css}" rel="stylesheet" type="text/css" />
-	<link th:href="@{css/admin.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/amazeui.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/admin.css}" rel="stylesheet" type="text/css" />
 
-	<link th:href="@{css/demo.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/demo.css}" rel="stylesheet" type="text/css" />
 
-	<link th:href="@{css/seastyle.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/seastyle.css}" rel="stylesheet" type="text/css" />
 
-	<script type="text/javascript" th:src="@{js/jquery-1.7.min.js}"></script>
-	<script type="text/javascript" th:src="@{js/script.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery-1.7.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/script.js}"></script>
 </head>
 
 <body>
@@ -155,12 +155,12 @@
 									<li th:each="item : ${page.list }">
 										<div class="i-pic limit">
 											<a class="trackref"
-											   href="http://localhost:8086/item/${item.id}.html" title=""
-											   target="_blank"> <img th:src="${item.image }" />
+											   th:href="@{http://localhost:8086/item/{itemId}.html(itemId=${item.id})}" title=""
+											   target="_blank"> <img th:src="${item.images[0] }" />
 											</a>
 											<p class="title fl">
 												<a class="trackref presaleSign_225865"
-												   href="http://localhost:8086/item/${item.id}.html"
+												   th:href="@{http://localhost:8086/item/{itemId}.html(itemId=${item.id})}"
 												   target="_blank" th:utext="${item.title }">${item.title }</a>
 											</p>
 											<p class="price fl">
@@ -172,6 +172,7 @@
 										</div>
 									</li>
 								<!--</c:forEach>-->
+							</ul>
 						<div class="clear"></div>
 						<!--分页 -->
 						<ul class="am-pagination am-pagination-right">
@@ -215,9 +216,9 @@
 		</div>
 
 		<script>
-			window.jQuery || document.write('<script th:src="@{js/jquery-1.9.min.js}"><\/script>');
+			window.jQuery || document.write('<script th:src="@{/js/jquery-1.9.min.js}"><\/script>');
 		</script>
-		<script type="text/javascript" th:src="@{js/quick_links.js}"></script>
+		<script type="text/javascript" th:src="@{/js/quick_links.js}"></script>
 
 		<div class="theme-popover-mask"></div>
 

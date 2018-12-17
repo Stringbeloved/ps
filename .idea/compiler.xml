@@ -16,6 +16,8 @@
       <module name="ps-common_test" target="1.8" />
       <module name="ps-interface_main" target="1.8" />
       <module name="ps-interface_test" target="1.8" />
+      <module name="ps-item-web_main" target="1.8" />
+      <module name="ps-item-web_test" target="1.8" />
       <module name="ps-manager_main" target="1.8" />
       <module name="ps-manager_test" target="1.8" />
       <module name="ps-mapper_main" target="1.8" />

@@ -9,4 +9,5 @@ include 'ps-portal'
 include 'ps-search-interface'
 include 'ps-search-service'
 include 'ps-search-web'
+include 'ps-item-web'
 

@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ps-common" />
             <option value="$PROJECT_DIR$/ps-interface" />
+            <option value="$PROJECT_DIR$/ps-item-web" />
             <option value="$PROJECT_DIR$/ps-manager" />
             <option value="$PROJECT_DIR$/ps-mapper" />
             <option value="$PROJECT_DIR$/ps-pojo" />

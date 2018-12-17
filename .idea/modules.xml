@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface.iml" group="ps-interface" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface_main.iml" group="ps-interface" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-interface/ps-interface_test.iml" group="ps-interface" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-item-web.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-item-web.iml" group="ps-item-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-item-web/ps-item-web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-item-web/ps-item-web_main.iml" group="ps-item-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-item-web/ps-item-web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-item-web/ps-item-web_test.iml" group="ps-item-web" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-manager.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-manager.iml" group="ps-manager" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-manager/ps-manager_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-manager/ps-manager_main.iml" group="ps-manager" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ps-manager/ps-manager_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ps-manager/ps-manager_test.iml" group="ps-manager" />

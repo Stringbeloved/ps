@@ -283,4 +283,12 @@ public class Item implements java.io.Serializable {
     public void setUpdated(Date updated) {
         this.updated = updated;
     }
+
+    public String[] getImages(){
+        if(image!=null&&!"".equals(image)){
+            String[] string=image.split(",");
+            return string;
+        }
+        return null;
+    }
 }
