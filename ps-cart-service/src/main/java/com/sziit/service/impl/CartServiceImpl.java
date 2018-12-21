@@ -1,0 +1,94 @@
+package com.sziit.service.impl;
+
+import com.alibaba.dubbo.config.annotation.Service;
+import com.google.gson.Gson;
+import com.sziit.mapper.ItemMapper;
+import com.sziit.pojo.Item;
+import com.sziit.service.CartService;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+ *  @项目名：  ps-parent
+ *  @包名：    com.sziit.service.impl
+ *  @文件名:   CartServiceImpl
+ *  @创建者:   daizengyi9.0
+ *  @创建时间:  2018/12/19 22:03
+ *  @描述：    TODO
+ */
+@Service
+public class CartServiceImpl implements CartService {
+
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
+
+    @Autowired
+    private ItemMapper itemMapper;
+
+    @Override
+    public int addCart(long userId, long itemId, int num) {
+        Boolean hexists=redisTemplate.opsForHash().hasKey("CART_PRE:"+userId,String.valueOf(itemId));
+        if(hexists){
+            Object obj = redisTemplate.opsForHash().get("CART_PRE:" + userId, String.valueOf(itemId));
+            System.out.println("obj:"+obj);
+            Item item=(Item) obj;
+            item.setNum(item.getNum()+num);
+            System.out.println("item:"+item);
+            redisTemplate.opsForHash().put("CART_PRE:"+userId,itemId+"", new Gson().toJson(item));
+            return 0;
+        }
+        Item item = itemMapper.selectByPrimaryKey(itemId);
+        item.setNum(num);
+        String image = item.getImage();
+        if(StringUtils.isNotBlank(image)){
+            item.setImage(image.split(",")[0]);
+        }
+        redisTemplate.opsForHash().put("CART_PRE:"+userId,itemId+"", new Gson().toJson(item));
+        return 0;
+    }
+
+    @Override
+    public int mergeCart(long userId, List<Item> itemList) {
+        for (Item tbItem : itemList) {
+            addCart(userId, tbItem.getId(), tbItem.getNum());
+        }
+        return 0;
+    }
+
+    @Override
+    public List<Item> getCartList(long userId) {
+        List<Object>  objList= redisTemplate.opsForHash().values("CART_PRE:" + userId);
+        System.out.println("objList:"+objList);
+        List<Item> itemList=new ArrayList<>();
+        for (Object obj : objList) {
+            System.out.println("obj:"+obj);
+            Item item =(Item)obj;
+            itemList.add(item);
+        }
+        return itemList;
+    }
+
+    @Override
+    public int updateCartNum(long userId, long itemId, int num) {
+        Item item=(Item)redisTemplate.opsForHash().get("CART_PRE:" + userId, itemId);
+        item.setNum(num);
+        redisTemplate.opsForHash().put("CART_PRE:"+userId,itemId+"", new Gson().toJson(item));
+        return 0;
+    }
+
+    @Override
+    public int deleteCartItem(long userId, long itemId) {
+        redisTemplate.opsForHash().delete("CART_PRE:" + userId, itemId);
+        return 0;
+    }
+
+    @Override
+    public int clearCartItem(long userId) {
+        redisTemplate.delete("CART_PRE:" + userId);
+        return 0;
+    }
+}

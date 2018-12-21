@@ -12,6 +12,12 @@
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
     <bytecodeTargetLevel>
+      <module name="ps-cart-interface_main" target="1.8" />
+      <module name="ps-cart-interface_test" target="1.8" />
+      <module name="ps-cart-service_main" target="1.8" />
+      <module name="ps-cart-service_test" target="1.8" />
+      <module name="ps-cart-web_main" target="1.8" />
+      <module name="ps-cart-web_test" target="1.8" />
       <module name="ps-common_main" target="1.8" />
       <module name="ps-common_test" target="1.8" />
       <module name="ps-interface_main" target="1.8" />
@@ -22,6 +28,12 @@
       <module name="ps-manager_test" target="1.8" />
       <module name="ps-mapper_main" target="1.8" />
       <module name="ps-mapper_test" target="1.8" />
+      <module name="ps-order-interface_main" target="1.8" />
+      <module name="ps-order-interface_test" target="1.8" />
+      <module name="ps-order-service_main" target="1.8" />
+      <module name="ps-order-service_test" target="1.8" />
+      <module name="ps-order-web_main" target="1.8" />
+      <module name="ps-order-web_test" target="1.8" />
       <module name="ps-parent_main" target="1.8" />
       <module name="ps-parent_test" target="1.8" />
       <module name="ps-pojo_main" target="1.8" />
@@ -36,6 +48,12 @@
       <module name="ps-search-web_test" target="1.8" />
       <module name="ps-service_main" target="1.8" />
       <module name="ps-service_test" target="1.8" />
+      <module name="ps-sso-interface_main" target="1.8" />
+      <module name="ps-sso-interface_test" target="1.8" />
+      <module name="ps-sso-service_main" target="1.8" />
+      <module name="ps-sso-service_test" target="1.8" />
+      <module name="ps-sso-web_main" target="1.8" />
+      <module name="ps-sso-web_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

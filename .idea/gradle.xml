@@ -9,17 +9,27 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/pa-cart-interface" />
+            <option value="$PROJECT_DIR$/ps-cart-interface" />
+            <option value="$PROJECT_DIR$/ps-cart-service" />
+            <option value="$PROJECT_DIR$/ps-cart-web" />
             <option value="$PROJECT_DIR$/ps-common" />
             <option value="$PROJECT_DIR$/ps-interface" />
             <option value="$PROJECT_DIR$/ps-item-web" />
             <option value="$PROJECT_DIR$/ps-manager" />
             <option value="$PROJECT_DIR$/ps-mapper" />
+            <option value="$PROJECT_DIR$/ps-order-interface" />
+            <option value="$PROJECT_DIR$/ps-order-service" />
+            <option value="$PROJECT_DIR$/ps-order-web" />
             <option value="$PROJECT_DIR$/ps-pojo" />
             <option value="$PROJECT_DIR$/ps-portal" />
             <option value="$PROJECT_DIR$/ps-search-interface" />
             <option value="$PROJECT_DIR$/ps-search-service" />
             <option value="$PROJECT_DIR$/ps-search-web" />
             <option value="$PROJECT_DIR$/ps-service" />
+            <option value="$PROJECT_DIR$/ps-sso-interface" />
+            <option value="$PROJECT_DIR$/ps-sso-service" />
+            <option value="$PROJECT_DIR$/ps-sso-web" />
           </set>
         </option>
       </GradleProjectSettings>

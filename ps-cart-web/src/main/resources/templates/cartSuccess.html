@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>购物车页面</title>
+
+		<link th:href="@{/css/amazeui.css}" rel="stylesheet" type="text/css" />
+		<link th:href="@{/css/demo.css}" rel="stylesheet" type="text/css" />
+		<link th:href="@{/css/admin.css}" rel="stylesheet" type="text/css" />
+		<link th:href="@{/css/sustyle.css}" rel="stylesheet" type="text/css" />
+
+
+		<script type="text/javascript" th:src="@{/js/jquery.js}"></script>
+		<script th:src="@{/js/jquery.cookie.js}"></script>
+		<script th:src="@{/js/login_info.js}"></script>
+
+	</head>
+
+	<body>
+
+		<!--引入顶部-->
+		<div th:replace="header::html" ></div>
+		<div class="take-delivery">
+			<div class="status">
+				<h2 style="font-size: 26px">您的商品已经成功加入购物车！</h2>
+
+				<div class="successInfo">
+
+					<div class="option">
+						<span class="info">您可以</span> <a href="#"
+														 onclick="window.history.back();return false;" class="J_MakePoint"><span
+							style="font-size: 20px">返回</span></a> <span class="info">或者</span> <a
+							href="http://localhost:8090/cart/cart.html" class="J_MakePoint"><span
+							style="font-size: 20px">去购物车结算</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="footer">
+			<div class="footer-hd">
+				<p>
+					<a href="#">恒望科技</a> <b>|</b> <a href="#">商城首页</a> <b>|</b> <a
+						href="#">支付宝</a> <b>|</b> <a href="#">物流</a>
+				</p>
+			</div>
+			<div class="footer-bd">
+				<p>
+					<a href="#">关于恒望</a> <a href="#">合作伙伴</a> <a href="#">联系我们</a> <a
+						href="#">网站地图</a> <em>© 2015-2025 Hengwang.com 版权所有</em>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

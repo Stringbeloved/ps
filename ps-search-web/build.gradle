@@ -27,5 +27,5 @@ dependencies {
     compile group: 'io.dubbo.springboot',name: 'spring-boot-starter-dubbo',version:'1.0.0'
 
 
-    compile project(":ps-search-service")
+    compile project(":ps-search-interface")
 }

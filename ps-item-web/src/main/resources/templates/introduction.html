@@ -20,7 +20,8 @@
 	<script type="text/javascript" th:src="@{/js/jquery.imagezoom.min.js}"></script>
 	<script type="text/javascript" th:src="@{/js/jquery.flexslider.js}"></script>
 	<script type="text/javascript" th:src="@{/js/list.js}"></script>
-
+	<script th:src="@{/js/jquery.cookie.js}"></script>
+    <script th:src="@{/js/login_info.js}"></script>
 </head>
 
 <body>
@@ -297,9 +298,15 @@
 							</div>
 						</li>
 					</div>
-
 				</div>
-
+				<script>
+                    function cartAdd(product_id){
+                        //取购物车商品数量
+                        var num = $("#text_box").val();
+                        //拼装url参数，做跳转
+                        location.href="http://localhost:8090/cart/add/"+product_id+".html?num=" + num;
+                    }
+				</script>
 				<div class="clear"></div>
 
 			</div>

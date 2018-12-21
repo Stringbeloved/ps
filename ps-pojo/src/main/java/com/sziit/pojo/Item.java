@@ -12,6 +12,8 @@
 
 package com.sziit.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -24,6 +26,7 @@ import java.util.Date;
  * @author bianj
  * @version 1.0.0 2017-12-24
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
 @Table(name = "tb_item")
 public class Item implements java.io.Serializable {

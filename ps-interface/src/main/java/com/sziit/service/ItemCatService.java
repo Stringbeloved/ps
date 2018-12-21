@@ -1,6 +1,5 @@
 package com.sziit.service;
 
-import com.sziit.pojo.EasyUITreeNode;
 import com.sziit.pojo.ItemCat;
 
 import java.util.List;
