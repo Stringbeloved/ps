@@ -7,6 +7,7 @@ import com.sziit.pojo.User;
 import com.sziit.service.CartService;
 import com.sziit.service.OrderService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -33,13 +34,18 @@ public class OrderController {
 
 
     @RequestMapping("/order/order-cart")
-    public String showOrderCart(HttpServletRequest request){
+    public String showOrderCart(HttpServletRequest request, Model model){
         User user = (User) request.getAttribute("user");
         List<Item> cartList = cartService.getCartList(user.getId());
-        if (cartList.isEmpty()){
-            return "redirect:http:localhost:8082";
+        if (cartList==null||cartList.size()==0){
+            return "redirect:http://localhost:8082";
         }
-        request.setAttribute("cartList", cartList);
+        long totalPrice=0;
+        for(int i=0;i<cartList.size();i++){
+             totalPrice= totalPrice+cartList.get(i).getPrice()*cartList.get(i).getNum();
+        }
+        model.addAttribute("cartList", cartList);
+        model.addAttribute("totalPrice",totalPrice);
         return "order-cart";
     }
 

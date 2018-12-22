@@ -2,6 +2,7 @@ package com.sziit.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.sziit.mapper.ItemMapper;
 import com.sziit.pojo.Item;
 import com.sziit.service.CartService;
@@ -59,18 +60,61 @@ public class CartServiceImpl implements CartService {
         return 0;
     }
 
+    /*@Override
+    public int addCart(long userId, long itemId, int num) {
+        //查要添加的商品数据
+        Item item = itemService.findItemById(itemId);
+
+        //查redis，遍历购物车，判断是否有重复数据，进而修改数量
+        List<Cart> cartList=queryCartByUserId(userId);
+
+        //遍历购物车
+        Cart c=null;
+        for (Cart cart:cartList){
+            if (itemId==cart.getItemId()) {
+                c = cart;
+                break;
+            }
+        }
+        if (c!=null){
+            //有重复的商品
+            c.setNum(c.getNum()+num);
+        }else {
+            Cart cart=new Cart();
+            cart.setItemId(itemId);
+            cart.setNum(num);
+            cart.setItemTitle(item.getTitle());
+            cart.setItemPrice(item.getPrice());
+            cart.setItemImage(item.getImages()[0]);
+            cart.setCreate(new Date());;
+            cart.setUpdate(new Date());
+            cartList.add(cart);
+        }
+
+        //存redis
+        String json=new Gson().toJson(cartList);
+        redisTemplate.opsForValue().set("CART_PRE:"+userId,json);
+        return 0;
+    }*/
+
     @Override
     public List<Item> getCartList(long userId) {
         List<Object>  objList= redisTemplate.opsForHash().values("CART_PRE:" + userId);
-        System.out.println("objList:"+objList);
         List<Item> itemList=new ArrayList<>();
         for (Object obj : objList) {
-            System.out.println("obj:"+obj);
-            Item item =(Item)obj;
+            Item item=new Gson().fromJson(obj.toString(),Item.class);
             itemList.add(item);
         }
         return itemList;
     }
+
+    /*@Override
+    public List<Cart> queryCartByUserId(long userId) {
+        String json=redisTemplate.opsForValue().get("CART_PRE:"+userId);
+        List<Cart> list = new Gson().fromJson(json, new TypeToken<List<Item>>() {
+        }.getType());
+        return list;
+    }*/
 
     @Override
     public int updateCartNum(long userId, long itemId, int num) {

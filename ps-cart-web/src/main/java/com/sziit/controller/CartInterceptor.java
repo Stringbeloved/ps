@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.google.gson.Gson;
 import com.sziit.pojo.User;
 import com.sziit.service.TokenService;
 import com.sziit.utils.CookieUtils;
@@ -51,7 +52,8 @@ public class CartInterceptor implements HandlerInterceptor {
 		if(userJson.isEmpty()){
 			return true;
 		}
-		User user= JsonUtils.jsonToPojo(userJson,User.class);
+		//User user= JsonUtils.jsonToPojo(userJson,User.class);
+		User user= new Gson().fromJson(userJson,User.class);
 		request.setAttribute("user", user);
 		return true;
 	}
